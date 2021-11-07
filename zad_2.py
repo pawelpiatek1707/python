@@ -8,7 +8,7 @@ def multiply_and_return_for(numbers: list) -> list:
     return returned_list
 
 
-def multiply_and_return_len(numbers: list):
+def multiply_and_return_len(numbers: list) -> list:
     return [number *5 for number in numbers]
 
 
