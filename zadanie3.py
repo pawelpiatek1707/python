@@ -1,5 +1,6 @@
-def check_even(num: int)-> bool:
+def check_even(num: int) -> bool:
     return num % 2 == 0
+
 
 is_even = check_even(4)
 

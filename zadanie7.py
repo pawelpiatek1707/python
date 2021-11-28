@@ -4,7 +4,26 @@ api_endpoint = 'https://api.openbrewerydb.org/breweries'
 
 
 class Brawery:
-    def __init__(self, id: int, name: str, brewery_type: str, street: str, address_2: str, address_3: str, city: str, state: str, county_province: str, postal_code: str, country: str, longitude: str, latitude: str, phone: str, website_url: str, updated_at: str, created_at: str) -> None:
+    def __init__(
+        self,
+        id: int,
+        name: str,
+        brewery_type: str,
+        street: str,
+        address_2: str,
+        address_3: str,
+        city: str,
+        state: str,
+        county_province: str,
+        postal_code: str,
+        country: str,
+        longitude: str,
+        latitude: str,
+        phone: str,
+        website_url: str,
+        updated_at: str,
+        created_at: str
+    ) -> None:
         self.id = id
         self.name = name
         self.brewery_type = brewery_type
@@ -24,7 +43,9 @@ class Brawery:
         self.created_at = created_at
 
     def __str__(self) -> str:
-        return f"Brewery {self.name} located on {self.street} streed in {self.city}. Contact phone number: {self.phone}"
+        return f"""Brewery
+        {self.name} located on {self.street}
+        streed in {self.city}. Contact phone number: {self.phone}"""
 
 
 def fetch_data(endpoint: str) -> list:
@@ -33,8 +54,25 @@ def fetch_data(endpoint: str) -> list:
     breweries_obj_list = list()
 
     for brewery in trimed_list:
-        breweries_obj_list.append(Brawery(brewery['id'], brewery['name'], brewery['brewery_type'], brewery['street'], brewery['address_2'], brewery['address_3'], brewery['city'], brewery['state'],
-                                          brewery['county_province'], brewery['postal_code'], brewery['country'], brewery['longitude'], brewery['latitude'], brewery['phone'], brewery['website_url'], brewery['updated_at'], brewery['created_at']))
+        breweries_obj_list.append(
+            Brawery(brewery['id'],
+                    brewery['name'],
+                    brewery['brewery_type'],
+                    brewery['street'],
+                    brewery['address_2'],
+                    brewery['address_3'],
+                    brewery['city'],
+                    brewery['state'],
+                    brewery['county_province'],
+                    brewery['postal_code'],
+                    brewery['country'],
+                    brewery['longitude'],
+                    brewery['latitude'],
+                    brewery['phone'],
+                    brewery['website_url'],
+                    brewery['updated_at'],
+                    brewery['created_at'])
+        )
 
     return breweries_obj_list
 

@@ -1,4 +1,4 @@
-def check_existance(numbers_list: list, number: int)->bool:
+def check_existance(numbers_list: list, number: int) -> bool:
     returned_value: bool = False
     for num in numbers_list:
         if num == number:
@@ -6,4 +6,5 @@ def check_existance(numbers_list: list, number: int)->bool:
             break
     return returned_value
 
-print(check_existance([1,2,3,4,5], 8))
+
+print(check_existance([1, 2, 3, 4, 5], 8))

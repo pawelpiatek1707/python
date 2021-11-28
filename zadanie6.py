@@ -5,4 +5,5 @@ def merge_lists(list1: list, list2: list) -> list:
         new_list.append(num**3)
     return new_list
 
-print(merge_lists([1,2,3,4], [4,5,6,7]))
+
+print(merge_lists([1, 2, 3, 4], [4, 5, 6, 7]))
