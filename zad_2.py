@@ -1,4 +1,5 @@
-numbers_list: list = [1,2,45,34,12]
+numbers_list: list = [1, 2, 45, 34, 12]
+
 
 def multiply_and_return_for(numbers: list) -> list:
     returned_list: list = []
@@ -9,11 +10,9 @@ def multiply_and_return_for(numbers: list) -> list:
 
 
 def multiply_and_return_len(numbers: list) -> list:
-    return [number *5 for number in numbers]
+    return [number * 5 for number in numbers]
 
 
 print(multiply_and_return_for(numbers_list))
 
 print(multiply_and_return_len(numbers_list))
-
-

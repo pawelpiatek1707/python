@@ -1,4 +1,5 @@
-num_list: list = [12,24,13,54,32,56,43,77,65,44]
+num_list: list = [12, 24, 13, 54, 32, 56, 43, 77, 65, 44]
+
 
 def return_even(numbers: list) -> list:
     even_numbers = list()
