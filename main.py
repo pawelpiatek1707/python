@@ -8,7 +8,7 @@ class Pojazd:
         self.__top_speed = top_speed
 
     def __str__(self) -> str:
-        return f"Car: {self.__brand} with {self.__wheels} is {self.__color} and can take {self.__load} load"
+        return f"Car: {self.__brand} with {self.__wheels} wheels is {self.__color} and can take {self.__load} load"
 
     @property
     def brand(self) -> str:
@@ -70,6 +70,7 @@ class Firma_Transportowa(Firma):
     def employers(self) -> int:
         return self.__employers
 
+
 class Firma_Spozywcza(Firma):
     def __init__(self, name: str, location: str, ceo: str, founding_date: str, numer_of_shops: int) -> None:
         super().__init__(name, location, ceo)
@@ -86,6 +87,7 @@ class Firma_Spozywcza(Firma):
     @property
     def numer_of_shops(self) -> int:
         return self.__number_of_shops
+
 
 class Kierowca:
     def __init__(self, driver_id: str, name: str, last_name: str) -> None:
@@ -139,6 +141,7 @@ class Odcinek:
     @property
     def to_point(self) -> str:
         return self.__to_point
+
 
 class Kurs:
     __course_id: str
@@ -211,6 +214,7 @@ class Kurs:
     def get_course_car(self) -> str:
         return self.car.__brand
 
+
 kierowca1 = Kierowca('3623ygssw', 'Jan', 'Kowalski')
 
 odcinek1 = Odcinek('3322fjfdi112', 231.5, kierowca1, 'Katowice', 'Krakow')
@@ -227,6 +231,7 @@ kurs.car = pojazd1
 
 print(kurs)
 print(kurs.sum_distance())
+print(kurs.car)
 
 
 
