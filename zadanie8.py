@@ -1,6 +1,7 @@
 import argparse
 import requests
-from zadanie7 import fetch_data
+from Zadanie7.helpers.fetch_data import fetch_data
+from Zadanie7.consts.api import api_endpoint as breweries_api
 
 parser = argparse.ArgumentParser(description='Brewery city')
 
@@ -10,7 +11,7 @@ args = parser.parse_args()
 
 input_path = args.City
 
-api_endpoint = f'https://api.openbrewerydb.org/breweries?by_city={input_path}'
+api_endpoint = f'{breweries_api}/breweries?by_city={input_path}'
 
 try:
     fetched_breweries = fetch_data(api_endpoint)
