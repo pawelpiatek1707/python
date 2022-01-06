@@ -18,9 +18,3 @@ if os.path.exists(img_path):
     regions = detect_people(f'img/{file_name}.jpg', (4, 4), (4, 4), 1.05, 1)
 else:
     print('Wrong file name')
-
-
-
-
-
-

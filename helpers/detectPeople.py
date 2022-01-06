@@ -3,7 +3,12 @@ import cv2
 import imutils
 
 
-def detect_people(img: str, winStride: Tuple[int, int], padding: Tuple[int, int], scale: float, useMeanshiftGrouping: int) -> None:
+def detect_people(
+    img: str,
+    winStride: Tuple[int, int],
+    padding: Tuple[int, int],
+    scale: float, useMeanshiftGrouping: int
+) -> None:
     hog = cv2.HOGDescriptor()
     hog.setSVMDetector(cv2.HOGDescriptor_getDefaultPeopleDetector())
 
