@@ -15,6 +15,6 @@ img_path = f'img/{file_name}.jpg'
 if os.path.exists(img_path):
     print(img_path)
 
-    regions = detect_people(f'img/{file_name}.jpg', (4, 4), (4, 4), 1.05, 1)
+    detect_people(f'img/{file_name}.jpg', (4, 4), (4, 4), 1.05, 1)
 else:
     print('Wrong file name')
