@@ -30,7 +30,4 @@ class Dieta:
         return self.__calories
 
     def __str__(self) -> str:
-        return f"""Dieta {self.__diet_name}
-                kosztuje {self.__diet_price}.
-                Autorem diety jest {self.__diet_author}.
-                Dieta ma {self.__calories} kalorii"""
+        return f"{self.__diet_name}: {self.__diet_price}"
